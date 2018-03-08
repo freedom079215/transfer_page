@@ -101,11 +101,12 @@ ElandTracker.Track(dataJson);
 
 		var F_URL = URL+"?"+"utm_source="+utm_source+"&utm_medium="+utm_medium+"&utm_campaign="+utm_campaign+"&utm_term="+utm_term+"&utm_content="+utm_content;
 		console.log(F_URL);
-		if (URL == undefined){  
+		if (F_URL == undefined){  
 			console.log(F_URL);
 			alert('setting F_URL');
 			
 		} else{
+			alert(F_URL)
 
 			setTimeout(function(){
 				  window.location.href = F_URL;
