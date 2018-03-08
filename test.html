@@ -38,16 +38,17 @@ function cID(name) {
   var TSB_ga_Cookie = cID("_ga").split(".")[cidL-2] + "." + cID("_ga").split(".")[cidL-1];
   gtag('config', 'UA-106549078-1', { //非第一次造訪者，啟動將資料傳送至GA的Gtag code
       'cookie_expires':63072000,
-      'dimension2': TSB_ga_Cookie, //GA cookie 必傳，否則無法在行內DW識別客戶資料
-      'dimension4': nbuuid //nbuuid此處-照您原先定義填入
+      'dimension2': TSB_ga_Cookie //GA cookie 必傳，否則無法在行內DW識別客戶資料
       });
   var threhold = 1; //若非為第一次造訪，則threhold = 1
   }
   else //因此若判斷非為undefined 訪客為第一次造訪，則執行下列程式碼
   {
     gtag('config', 'UA-106549078-1', {
-        'cookie_expires':63072000,
-        'dimension4': nbuuid, //nbuuid此處-照您原先定義填入
+    	'user_id':cust_No,
+    	'cookie_expires':63072000,
+    	'dimension1': cust_No,
+    	'dimension2': TSB_ga_Cookie,
         'send_page_view' : false //先暫停傳送資料至GA
         });
   }
