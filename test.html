@@ -24,6 +24,7 @@ $_GET[decode(arguments[1])] = decode(arguments[2]);
 <!-- cID Function:獲取瀏覽器cookie資料的Function,傳入所需要的cookie name即可獲得cookieid value --> 
 <script>
 var cust_No = $_GET['utm_term'] ;
+console.log(cust_No);
 if (cust_No == undefined){var cust_No = null ;}
 function cID(name) {
   var value = "; " + document.cookie;
@@ -106,9 +107,9 @@ ElandTracker.Track(dataJson);
 			
 		} else{
 
-			//setTimeout(function(){
-			//	  window.location.href = F_URL;
-			//},1200);
+			setTimeout(function(){
+				  window.location.href = F_URL;
+			},1200);
 		}
 		
 		
