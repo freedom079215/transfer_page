@@ -36,7 +36,9 @@ function cID(name) {
   var cidL = cidL.split(".").length; 
   var TSB_ga_Cookie = cID("_ga").split(".")[cidL-2] + "." + cID("_ga").split(".")[cidL-1];
   gtag('config', 'UA-109454817-1', { 
+      'user_id':cust_No,
       'cookie_expires':63072000,
+      'dimension1': cust_No,
       'dimension2': TSB_ga_Cookie 
       });
   var threhold = 1;
