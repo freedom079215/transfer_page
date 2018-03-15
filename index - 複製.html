@@ -44,10 +44,10 @@ function cID(name) {
   else 
   {
     gtag('config', 'UA-109454817-1', {
-      'user_id':cust_No,
-      'cookie_expires':63072000,
-      'dimension1': cust_No,
-      'dimension2': TSB_ga_Cookie,
+    	'user_id':cust_No,
+    	'cookie_expires':63072000,
+    	'dimension1': cust_No,
+    	'dimension2': TSB_ga_Cookie,
         'send_page_view' : false 
         });
   }
@@ -87,27 +87,27 @@ ElandTracker.Track(dataJson);
 
 <script type="text/javascript">
         var URL = $_GET['URL'];
-    var utm_source = $_GET['utm_source'];
-    var utm_medium = $_GET['utm_medium'];
-    var utm_campaign = $_GET['utm_campaign'];
-    var utm_content = $_GET['utm_content'];
+		var utm_source = $_GET['utm_source'];
+		var utm_medium = $_GET['utm_medium'];
+		var utm_campaign = $_GET['utm_campaign'];
+		var utm_content = $_GET['utm_content'];
 
-    var F_URL = URL+"?"+"utm_source="+utm_source+"&utm_medium="+utm_medium+"&utm_campaign="+utm_campaign+"&utm_content="+utm_content;
-    if (URL == undefined){  
-      alert('setting F_URL');
-      
-    } else{
+		var F_URL = URL+"?"+"utm_source="+utm_source+"&utm_medium="+utm_medium+"&utm_campaign="+utm_campaign+"&utm_content="+utm_content;
+		if (URL == undefined){  
+			alert('setting F_URL');
+			
+		} else{
 
-      setTimeout(function(){
-          window.location.href = F_URL;
-      },1500);
-    }
-    
-    
+			setTimeout(function(){
+				  window.location.href = F_URL;
+			},1500);
+		}
+		
+		
 </script>
 
 
-  
+	
 </head>
 
 
